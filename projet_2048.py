@@ -198,14 +198,14 @@ racine.bind('<Key>', clavier)# Les movements des tuiles via le Clavier
 
 
 def Save(liste):
-    """Cette fonction permet de sauvegarder la patie via son boutton."""
+    """Cette fonction permet de sauvegarder la patie via son boutton.(Vu en IN202)"""
     u = liste
     sauvegarde = open("2048.txt", "a")
     sauvegarde.write(str(u) + "\n")
     sauvegarde.close()
 
 def Load():
-    """Cette fonction permet de charger une partie via son boutton"""
+    """Cette fonction permet de charger une partie via son boutton(Vu en IN202)"""
     global liste
     fic = open("2048.txt","r")
     b = []
