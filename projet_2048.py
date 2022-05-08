@@ -64,7 +64,7 @@ def values(liste):
     for a in range(len(liste)):
         for b in range(len(liste[a])):
             if liste[a][b] != 0:
-                canvas.create_text(x, y, fill=rgbtohex(120, 111, 102), text=liste[a][b],font=("arial black", 40))
+                canvas.create_text(x, y, fill=rgbtohex(120, 111, 102), text=liste[a][b],font=("arial black", 35))
                 
             x += H//4
         y += L//4
@@ -239,13 +239,13 @@ Bouton_Exit = tk.Button(racine, text="quitter",command=racine.quit, borderwidth=
 Bouton_Exit.grid(column=3, row=0)
 
 Bouton_Play = tk.Button(racine, text='Play', command=fond, borderwidth=6)
-Bouton_Play.grid(row= 0, column = 0)
+Bouton_Play.grid(column= 0, row = 0)
 
 Bouton_Save = tk.Button(racine, text="Sauvegarder", command=lambda: Save(liste),borderwidth=6)
 Bouton_Save.grid(column=0, row=3)
 
-bouton_Load = tk.Button(racine, text="Charger",command=lambda: values(Load()), borderwidth=6)
-bouton_Load.grid(column=3, row=3)
+Bouton_Load = tk.Button(racine, text="Charger",command=lambda: values(Load()), borderwidth=6)
+Bouton_Load.grid(column=3, row=3)
 
 
 racine.mainloop()
